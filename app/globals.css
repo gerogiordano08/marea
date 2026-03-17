@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Tidal Motion - Spring Physics */
+  .animate-tidal-enter {
+    animation: tidalEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes tidalEnter {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Hard Shadow - Flat Design Element */
+  .shadow-hard {
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+  }
+
+  .shadow-hard-blue {
+    box-shadow: 6px 6px 0px 0px rgba(0, 82, 255, 1);
+  }
+
+  /* Dot Grid Background Pattern */
+  .dot-grid {
+    background-image: radial-gradient(circle, rgba(0, 82, 255, 0.03) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Geometric Blob */
+  .geometric-blob {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 82, 255, 0.05);
+    filter: blur(60px);
+  }
+}
