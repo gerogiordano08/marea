@@ -29,19 +29,13 @@ export default function Navigation({ lang, dict }: { lang: string; dict: NavDict
               {dict.home}
             </Link>
             <Link
-              href={`/${lang}/projects`}
+              href={`/${lang}/services`}
               className="font-medium hover:text-accent transition-colors"
             >
-              {dict.projects}
-            </Link>
-            <Link
-              href={`/${lang}/reviews`}
-              className="font-medium hover:text-accent transition-colors"
-            >
-              {dict.reviews}
+              {dict.services}
             </Link>
             <a
-              href="mailto:hello@marea.studio"
+              href="mailto:gerogiordano08@gmail.com"
               className="font-medium px-6 py-2 bg-accent text-white hover:bg-accent-deep transition-colors"
             >
               {dict.contact}

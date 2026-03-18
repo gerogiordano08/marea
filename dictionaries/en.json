@@ -2,8 +2,7 @@
   "nav": {
     "brand": "Marea",
     "home": "Home",
-    "projects": "Projects",
-    "reviews": "Reviews",
+    "services": "Services",
     "contact": "Contact",
     "toggleMenu": "Toggle menu"
   },
@@ -12,7 +11,7 @@
     "title1": "Digital Systems",
     "title2": "Built to Last",
     "description": "Marea delivers type-safe architecture and technical rigor.\nWe're a software solutions agency from Mendoza, Argentina, engineered for reliability, security and perfection.",
-    "ctaPrimary": "View Our Work",
+    "ctaPrimary": "Our Services",
     "ctaSecondary": "Client Reviews",
     "card1Badge": "TYPE-SAFE",
     "card1Title": "React + TypeScript",
@@ -26,24 +25,24 @@
     "description": "We combine technical depth with product thinking to deliver solutions that are built to scale.",
     "items": [
       {
-        "title": "Frontend Development",
+        "title": "Web Development",
         "description": "Modern, performant UIs built with React, Next.js, and TypeScript. We obsess over user experience and Core Web Vitals.",
         "stack": ["React", "Next.js", "TypeScript", "Tailwind"]
       },
       {
-        "title": "Backend & APIs",
-        "description": "Scalable server architecture, REST and GraphQL APIs, and robust database design using PostgreSQL and Supabase.",
-        "stack": ["Node.js", "PostgreSQL", "Supabase", "GraphQL"]
+        "title": "Backend Architecture, OOP & APIs",
+        "description": "Robust management systems using Django and object-oriented patterns.",
+        "stack": ["Django", "PostgreSQL", "Python"]
       },
       {
-        "title": "DevOps & Deployment",
-        "description": "CI/CD pipelines, containerized deployments, and cloud infrastructure on Vercel, AWS, and Railway.",
-        "stack": ["Vercel", "Docker", "AWS", "Railway"]
+        "title": "Automation & Scripting",
+        "description": "Custom Python scripts for data processing and automated testing.",
+        "stack": ["Unit Testing", "Automation", "Scripts"]
       },
       {
-        "title": "Code Audits & Consulting",
+        "title": "Reliability & DevOps",
         "description": "Technical reviews, performance optimization, and architecture consulting for existing codebases and teams.",
-        "stack": ["Audit", "Performance", "Architecture"]
+        "stack": ["Docker", "CI/CD", "GitHub Actions"]
       }
     ]
   },
@@ -71,8 +70,7 @@
     "navTitle": "Navigation",
     "navItems": {
       "home": "Home",
-      "projects": "Projects",
-      "reviews": "Reviews"
+      "services": "Services"
     },
     "connectTitle": "Connect",
     "rights": "© 2026 Marea. All rights reserved.",

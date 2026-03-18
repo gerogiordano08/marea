@@ -75,7 +75,9 @@ export default function StatsSection({ dict }: { dict: StatsDict }) {
             
             {/* Stat 3 */}
             <div className="border-l-4 border-accent pl-8 space-y-4">
-              <CountUpMetric target={100} suffix="%" />
+              <div className="font-display font-extrabold text-6xl tracking-tight">
+                {dict.stat3.title}
+              </div>
               <div className="font-mono text-xs text-accent tracking-ultrawide uppercase">
                 {dict.stat3.subtitle}
               </div>

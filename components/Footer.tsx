@@ -35,13 +35,8 @@ export default function Footer({ lang, dict }: { lang: string; dict: FooterDict 
                 </Link>
               </li>
               <li>
-                <Link href={`/${lang}/projects`} className="text-white/70 hover:text-accent transition-colors">
-                  {dict.navItems.projects}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${lang}/reviews`} className="text-white/70 hover:text-accent transition-colors">
-                  {dict.navItems.reviews}
+                <Link href={`/${lang}/services`} className="text-white/70 hover:text-accent transition-colors">
+                  {dict.navItems.services}
                 </Link>
               </li>
             </ul>

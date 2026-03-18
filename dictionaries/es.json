@@ -2,17 +2,16 @@
   "nav": {
     "brand": "Marea",
     "home": "Inicio",
-    "projects": "Proyectos",
-    "reviews": "Reseñas",
+    "services": "Servicios",
     "contact": "Contacto",
     "toggleMenu": "Alternar menú"
   },
   "hero": {
-    "badge": "Excelencia en Ingeniería",
+    "badge": "Excelencia para tu negocio.",
     "title1": "Sistemas Digitales",
-    "title2": "Para Durar",
-    "description": "Marea entrega arquitectura type-safe y rigor técnico.\nSomos una agencia de soluciones de software de Mendoza, Argentina, diseñada para la confiabilidad, seguridad y perfección.",
-    "ctaPrimary": "Ver Nuestro Trabajo",
+    "title2": "Hechos para Durar.",
+    "description": "Marea entrega arquitectura segura y técnicamente sólida.\nSomos una agencia de soluciones de software de Mendoza, Argentina, diseñada para la confiabilidad, seguridad y perfección.",
+    "ctaPrimary": "Nuestros Servicios",
     "ctaSecondary": "Reseñas de Clientes",
     "card1Badge": "TYPE-SAFE",
     "card1Title": "React + TypeScript",
@@ -20,47 +19,47 @@
     "card2Title": "Django + Docker"
   },
   "services": {
-    "badge": "Lo Que Hacemos",
-    "title1": "Pilares de",
+    "badge": "Lo Que Ofrecemos",
+    "title1": "Servicios de",
     "title2": "Ingeniería.",
-    "description": "Combinamos profundidad técnica con mentalidad de producto para entregar soluciones construidas para escalar.",
-    "items": [
+    "description": "Combinamos profundidad técnica con mentalidad de producto para entregar soluciones construidas a medida.",
+"items": [
       {
-        "title": "Desarrollo Frontend",
+        "title": "Desarrollo Web",
         "description": "UIs modernas y de alto rendimiento construidas con React, Next.js y TypeScript. Nos obsesionamos con la experiencia de usuario y los Core Web Vitals.",
         "stack": ["React", "Next.js", "TypeScript", "Tailwind"]
       },
       {
-        "title": "Backend & APIs",
-        "description": "Arquitectura de servidores escalable, APIs REST y GraphQL, y diseño de bases de datos robustas usando PostgreSQL y Supabase.",
-        "stack": ["Node.js", "PostgreSQL", "Supabase", "GraphQL"]
+        "title": "Arquitectura Backend, OOP y APIs",
+        "description": "Sistemas de gestión robustos utilizando Django y patrones orientados a objetos.",
+        "stack": ["Django", "PostgreSQL", "Python"]
       },
       {
-        "title": "DevOps & Despliegue",
-        "description": "Pipelines de CI/CD, despliegues contenedorizados e infraestructura en la nube en Vercel, AWS y Railway.",
-        "stack": ["Vercel", "Docker", "AWS", "Railway"]
+        "title": "Automatización y Scripting",
+        "description": "Scripts de Python personalizados para procesamiento de datos y testing automatizado.",
+        "stack": ["Unit Testing", "Automatización", "Scripts"]
       },
       {
-        "title": "Auditoría & Consultoría",
+        "title": "Confiabilidad y DevOps",
         "description": "Revisiones técnicas, optimización de rendimiento y consultoría de arquitectura para bases de código y equipos existentes.",
-        "stack": ["Audit", "Performance", "Architecture"]
+        "stack": ["Docker", "CI/CD", "GitHub Actions"]
       }
-    ]
-  },
+    ]  },
   "stats": {
     "stat1": {
-      "title": "Cloud-Native",
+      "title": "Pensado para la nube",
       "subtitle": "Soluciones",
-      "description": "Sistemas listos para producción desplegados en plataformas de fintech, e-commerce y SaaS."
+      "description": "Sistemas listos para producción desplegados en la nube para la mejor experiencia."
     },
     "stat2": {
-      "title": "Security First",
+      "title": "Seguridad Primero",
       "subtitle": "Filosofía",
-      "description": "Precisión de montaña se encuentra con una ejecución técnica fluida. Talento local, estándares globales."
+      "description": "El objetivo número uno de Marea es la seguridad de tus datos."
     },
     "stat3": {
-      "subtitle": "Arquitectura Type-Safe",
-      "description": "Cada proyecto construido con TypeScript y modo estricto habilitado. Sin compromisos en la calidad del código."
+      "title": "Experiencia de Usuario",
+      "subtitle": "Obsesión",
+      "description": "Nos obsesionamos con la experiencia de usuario y la satisfaccion del consumidor, tanto para el usuario final como para el cliente."
     }
   },
   "footer": {
@@ -71,10 +70,9 @@
     "navTitle": "Navegación",
     "navItems": {
       "home": "Inicio",
-      "projects": "Proyectos",
-      "reviews": "Reseñas"
+      "services": "Servicios"
     },
-    "connectTitle": "Conectar",
+    "connectTitle": "Contactanos",
     "rights": "© 2026 Marea. Todos los derechos reservados.",
     "stack": "Construido con Next.js 15 • TypeScript • Tailwind CSS"
   }

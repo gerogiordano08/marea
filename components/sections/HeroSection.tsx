@@ -44,13 +44,8 @@ export default function HeroSection({ lang, dict }: { lang: string; dict: HeroDi
               transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-wrap gap-4"
             >
-              <Link href={`/${lang}/projects`}>
+              <Link href={`/${lang}/services`}>
                 <TidalButton size="large">{dict.ctaPrimary}</TidalButton>
-              </Link>
-              <Link href={`/${lang}/reviews`}>
-                <TidalButton variant="secondary" size="large">
-                  {dict.ctaSecondary}
-                </TidalButton>
               </Link>
             </motion.div>
           </div>
