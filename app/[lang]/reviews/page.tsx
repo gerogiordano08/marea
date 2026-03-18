@@ -1,11 +1,10 @@
-"use client";
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import MonoBadge from "@/components/MonoBadge";
 import TidalWrapper from "@/components/TidalWrapper";
 import { motion } from "framer-motion";
 import { Star, CheckCircle2 } from "lucide-react";
+import { getDictionary } from "@/dictionaries/get-dictionary";
 
 const reviews = [
   {
@@ -82,10 +81,17 @@ const reviews = [
   },
 ];
 
-export default function ReviewsPage() {
+export default async function ReviewsPage({
+  params,
+}: {
+  params: Promise<{ lang: "en" | "es" }>;
+}) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+
   return (
     <>
-      <Navigation />
+      <Navigation lang={lang} dict={dict.nav} />
       <main className="pt-16">
         {/* Header */}
         <section className="bg-background py-24">
@@ -187,7 +193,7 @@ export default function ReviewsPage() {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer lang={lang} dict={dict.footer} />
     </>
   );
 }

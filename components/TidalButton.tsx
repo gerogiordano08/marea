@@ -3,7 +3,11 @@
 import { motion } from "framer-motion";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface TidalButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface TidalButtonProps
+  extends Omit<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    "onDrag" | "onDragStart" | "onDragEnd" | "onAnimationStart"
+  > {
   children: ReactNode;
   variant?: "primary" | "secondary";
   size?: "default" | "large";

@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { Github, Twitter, Linkedin } from "lucide-react";
+import type { FooterDict } from "@/lib/types/dictionary";
 
-export default function Footer() {
+export default function Footer({ lang, dict }: { lang: string; dict: FooterDict }) {
   return (
     <footer className="relative bg-marea-onyx text-white py-16">
       <div className="container mx-auto px-6">
@@ -12,35 +13,35 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="font-display font-bold text-2xl">Marea</span>
+              <span className="font-display font-bold text-2xl">{dict.brand}</span>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
-              Engineering Excellence from Mendoza.
+              {dict.description1}
               <br />
-              Safe architecture. Technical rigor.
+              {dict.description2}
             </p>
             <div className="font-mono text-xs text-accent tracking-ultrawide">
-              EST. 2023
+              {dict.est}
             </div>
           </div>
           
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-display font-bold text-lg">Navigation</h3>
+            <h3 className="font-display font-bold text-lg">{dict.navTitle}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="text-white/70 hover:text-accent transition-colors">
-                  Home
+                <Link href={`/${lang}`} className="text-white/70 hover:text-accent transition-colors">
+                  {dict.navItems.home}
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-white/70 hover:text-accent transition-colors">
-                  Projects
+                <Link href={`/${lang}/projects`} className="text-white/70 hover:text-accent transition-colors">
+                  {dict.navItems.projects}
                 </Link>
               </li>
               <li>
-                <Link href="/reviews" className="text-white/70 hover:text-accent transition-colors">
-                  Reviews
+                <Link href={`/${lang}/reviews`} className="text-white/70 hover:text-accent transition-colors">
+                  {dict.navItems.reviews}
                 </Link>
               </li>
             </ul>
@@ -48,7 +49,7 @@ export default function Footer() {
           
           {/* Contact */}
           <div className="space-y-4">
-            <h3 className="font-display font-bold text-lg">Connect</h3>
+            <h3 className="font-display font-bold text-lg">{dict.connectTitle}</h3>
             {/* <div className="flex gap-4">
               <a
                 href="https://github.com/marea"
@@ -91,10 +92,10 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50">
             <div className="font-mono">
-              © 2026 Marea. All rights reserved.
+              {dict.rights}
             </div>
             <div className="font-mono">
-              Built with Next.js 15 • TypeScript • Tailwind CSS
+              {dict.stack}
             </div>
           </div>
         </div>

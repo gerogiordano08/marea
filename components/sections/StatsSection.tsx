@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import TidalWrapper from "@/components/TidalWrapper";
+import type { StatsDict } from "@/lib/types/dictionary";
 
 function CountUpMetric({ target, suffix = "" }: { target: number; suffix?: string }) {
   const [count, setCount] = useState(0);
@@ -37,7 +38,7 @@ function CountUpMetric({ target, suffix = "" }: { target: number; suffix?: strin
   );
 }
 
-export default function StatsSection() {
+export default function StatsSection({ dict }: { dict: StatsDict }) {
   return (
     <section className="relative bg-marea-onyx text-white py-32 overflow-hidden">
       {/* Dot Grid Background */}
@@ -48,27 +49,27 @@ export default function StatsSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Stat 1 */}
             <div className="border-l-4 border-accent pl-8 space-y-4">
-<div className="font-display font-extrabold text-6xl tracking-tight">
-                Cloud-Native
+              <div className="font-display font-extrabold text-6xl tracking-tight">
+                {dict.stat1.title}
               </div>
               <div className="font-mono text-xs text-accent tracking-ultrawide uppercase">
-                Solutions
+                {dict.stat1.subtitle}
               </div>
               <p className="text-white/70 text-sm leading-relaxed">
-                Production-ready systems deployed across fintech, e-commerce, and SaaS platforms.
+                {dict.stat1.description}
               </p>
             </div>
             
             {/* Stat 2 */}
             <div className="border-l-4 border-accent pl-8 space-y-4">
               <div className="font-display font-extrabold text-6xl tracking-tight">
-                Security First
+                {dict.stat2.title}
               </div>
               <div className="font-mono text-xs text-accent tracking-ultrawide uppercase">
-                Philosophy
+                {dict.stat2.subtitle}
               </div>
               <p className="text-white/70 text-sm leading-relaxed">
-                Mountain-sharp precision meets fluid technical execution. Local talent, global standards.
+                {dict.stat2.description}
               </p>
             </div>
             
@@ -76,10 +77,10 @@ export default function StatsSection() {
             <div className="border-l-4 border-accent pl-8 space-y-4">
               <CountUpMetric target={100} suffix="%" />
               <div className="font-mono text-xs text-accent tracking-ultrawide uppercase">
-                Type-Safe Architecture
+                {dict.stat3.subtitle}
               </div>
               <p className="text-white/70 text-sm leading-relaxed">
-                Every project built with TypeScript, strict mode enabled. No compromises on code quality.
+                {dict.stat3.description}
               </p>
             </div>
           </div>

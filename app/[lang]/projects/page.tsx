@@ -1,5 +1,3 @@
-"use client";
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import MonoBadge from "@/components/MonoBadge";
@@ -7,6 +5,7 @@ import TidalWrapper from "@/components/TidalWrapper";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import Link from "next/link";
+import { getDictionary } from "@/dictionaries/get-dictionary";
 
 const projects = [
   {
@@ -66,10 +65,17 @@ const projects = [
 },
 ];
 
-export default function ProjectsPage() {
+export default async function ProjectsPage({
+  params,
+}: {
+  params: Promise<{ lang: "en" | "es" }>;
+}) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+
   return (
     <>
-      <Navigation />
+      <Navigation lang={lang} dict={dict.nav} />
       <main className="pt-16">
         {/* Header */}
         <section className="bg-background py-24">
@@ -182,7 +188,7 @@ export default function ProjectsPage() {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer lang={lang} dict={dict.footer} />
     </>
   );
 }

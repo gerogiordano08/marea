@@ -4,47 +4,50 @@ import { motion } from "framer-motion";
 import { Code2, Database, Terminal, Shield } from "lucide-react";
 import MonoBadge from "@/components/MonoBadge";
 import TidalWrapper from "@/components/TidalWrapper";
+import type { ServicesDict } from "@/lib/types/dictionary";
 
-const services = [
+const getServices = (dict: ServicesDict) => [
   {
     icon: Code2,
-    title: "Full-Stack Development",
-    description: "React, Next.js, Node.js, and TypeScript. Type-safe from frontend to backend.",
-    stack: ["React 19", "Next.js 15", "TypeScript 5"],
+    title: dict.items[0].title,
+    description: dict.items[0].description,
+    stack: dict.items[0].stack,
   },
   {
     icon: Database,
-    title: "Backend Architecture & OOP",
-    description: "Robust management systems using Django and object-oriented patterns.",
-    stack: ["Python", "Django", "PostgreSQL"],
+    title: dict.items[1].title,
+    description: dict.items[1].description,
+    stack: dict.items[1].stack,
   },
   {
     icon: Terminal,
-    title: "Automation & Scripting",
-    description: "Custom Python scripts for data processing and automated testing.",
-    stack: ["Unit Testing", "Automation", "Scripts"],
+    title: dict.items[2].title,
+    description: dict.items[2].description,
+    stack: dict.items[2].stack,
   },
   {
     icon: Shield,
-    title: "Security & DevOps",
-    description: "Containerized environments and seamless CI/CD pipelines.",
-    stack: ["Docker", "CI/CD", "GitHub Actions"],
+    title: dict.items[3].title,
+    description: dict.items[3].description,
+    stack: dict.items[3].stack,
   },
 ];
 
-export default function ServicesSection() {
+export default function ServicesSection({ dict }: { dict: ServicesDict }) {
+  const services = getServices(dict);
+
   return (
     <section className="relative bg-background py-32">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mb-16">
-          <MonoBadge>Our Services</MonoBadge>
+          <MonoBadge>{dict.badge}</MonoBadge>
           <h2 className="font-display font-bold text-5xl mt-6 mb-4 tracking-tight">
-            Engineering Excellence
+            {dict.title1}
             <br />
-            <span className="text-accent">Across the Stack</span>
+            <span className="text-accent">{dict.title2}</span>
           </h2>
           <p className="text-foreground/70 text-lg">
-            We build digital systems with precision, performance, and longevity in mind.
+            {dict.description}
           </p>
         </div>
         
@@ -74,7 +77,7 @@ export default function ServicesSection() {
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
-                    {service.stack.map((tech, i) => (
+                    {service.stack.map((tech: string, i: number) => (
                       <span
                         key={i}
                         className="font-mono text-[10px] tracking-wide uppercase px-3 py-1 bg-foreground/5 group-hover:bg-accent group-hover:text-white"

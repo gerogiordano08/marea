@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import type { NavDict } from "@/lib/types/dictionary";
 
-export default function Navigation() {
+export default function Navigation({ lang, dict }: { lang: string; dict: NavDict }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -12,38 +13,38 @@ export default function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={`/${lang}`} className="flex items-center gap-2">
             <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
             <span className="font-display font-bold text-2xl tracking-tight">
-              Marea
+              {dict.brand}
             </span>
           </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link
-              href="/"
+              href={`/${lang}`}
               className="font-medium hover:text-accent transition-colors"
             >
-              Home
+              {dict.home}
             </Link>
             <Link
-              href="/projects"
+              href={`/${lang}/projects`}
               className="font-medium hover:text-accent transition-colors"
             >
-              Projects
+              {dict.projects}
             </Link>
             <Link
-              href="/reviews"
+              href={`/${lang}/reviews`}
               className="font-medium hover:text-accent transition-colors"
             >
-              Reviews
+              {dict.reviews}
             </Link>
             <a
               href="mailto:hello@marea.studio"
               className="font-medium px-6 py-2 bg-accent text-white hover:bg-accent-deep transition-colors"
             >
-              Contact
+              {dict.contact}
             </a>
           </div>
           
@@ -51,7 +52,7 @@ export default function Navigation() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2"
-            aria-label="Toggle menu"
+            aria-label={dict.toggleMenu}
           >
             <Menu className="w-6 h-6" />
           </button>
@@ -61,28 +62,28 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3">
             <Link
-              href="/"
+              href={`/${lang}`}
               className="block py-2 font-medium hover:text-accent transition-colors"
             >
-              Home
+              {dict.home}
             </Link>
             <Link
-              href="/projects"
+              href={`/${lang}/projects`}
               className="block py-2 font-medium hover:text-accent transition-colors"
             >
-              Projects
+              {dict.projects}
             </Link>
             <Link
-              href="/reviews"
+              href={`/${lang}/reviews`}
               className="block py-2 font-medium hover:text-accent transition-colors"
             >
-              Reviews
+              {dict.reviews}
             </Link>
             <a
               href="mailto:hello@marea.studio"
               className="block py-2 font-medium text-accent"
             >
-              Contact
+              {dict.contact}
             </a>
           </div>
         )}

@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "brand": "Marea",
+    "home": "Home",
+    "projects": "Projects",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "toggleMenu": "Toggle menu"
+  },
+  "hero": {
+    "badge": "Engineering Excellence",
+    "title1": "Digital Systems",
+    "title2": "Built to Last",
+    "description": "Marea delivers type-safe architecture and technical rigor.\nWe're a software solutions agency from Mendoza, Argentina, engineered for reliability, security and perfection.",
+    "ctaPrimary": "View Our Work",
+    "ctaSecondary": "Client Reviews",
+    "card1Badge": "TYPE-SAFE",
+    "card1Title": "React + TypeScript",
+    "card2Badge": "SCALABLE",
+    "card2Title": "Django + Docker"
+  },
+  "services": {
+    "badge": "What We Do",
+    "title1": "Engineering",
+    "title2": "Pillars.",
+    "description": "We combine technical depth with product thinking to deliver solutions that are built to scale.",
+    "items": [
+      {
+        "title": "Frontend Development",
+        "description": "Modern, performant UIs built with React, Next.js, and TypeScript. We obsess over user experience and Core Web Vitals.",
+        "stack": ["React", "Next.js", "TypeScript", "Tailwind"]
+      },
+      {
+        "title": "Backend & APIs",
+        "description": "Scalable server architecture, REST and GraphQL APIs, and robust database design using PostgreSQL and Supabase.",
+        "stack": ["Node.js", "PostgreSQL", "Supabase", "GraphQL"]
+      },
+      {
+        "title": "DevOps & Deployment",
+        "description": "CI/CD pipelines, containerized deployments, and cloud infrastructure on Vercel, AWS, and Railway.",
+        "stack": ["Vercel", "Docker", "AWS", "Railway"]
+      },
+      {
+        "title": "Code Audits & Consulting",
+        "description": "Technical reviews, performance optimization, and architecture consulting for existing codebases and teams.",
+        "stack": ["Audit", "Performance", "Architecture"]
+      }
+    ]
+  },
+  "stats": {
+    "stat1": {
+      "title": "Cloud-Native",
+      "subtitle": "Solutions",
+      "description": "Production-ready systems deployed across fintech, e-commerce, and SaaS platforms."
+    },
+    "stat2": {
+      "title": "Security First",
+      "subtitle": "Philosophy",
+      "description": "Mountain-sharp precision meets fluid technical execution. Local talent, global standards."
+    },
+    "stat3": {
+      "subtitle": "Type-Safe Architecture",
+      "description": "Every project built with TypeScript, strict mode enabled. No compromises on code quality."
+    }
+  },
+  "footer": {
+    "brand": "Marea",
+    "description1": "Engineering Excellence from Mendoza.",
+    "description2": "Safe architecture. Technical rigor.",
+    "est": "EST. 2023",
+    "navTitle": "Navigation",
+    "navItems": {
+      "home": "Home",
+      "projects": "Projects",
+      "reviews": "Reviews"
+    },
+    "connectTitle": "Connect",
+    "rights": "© 2026 Marea. All rights reserved.",
+    "stack": "Built with Next.js 15 • TypeScript • Tailwind CSS"
+  }
+}
