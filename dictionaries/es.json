@@ -48,17 +48,17 @@
   "stats": {
     "stat1": {
       "title": "Pensado para la nube",
-      "subtitle": "Soluciones",
+      "subtitle": "Nuestras Soluciones",
       "description": "Sistemas listos para producción desplegados en la nube para la mejor experiencia."
     },
     "stat2": {
       "title": "Seguridad Primero",
-      "subtitle": "Filosofía",
+      "subtitle": "Nuestra Filosofía",
       "description": "El objetivo número uno de Marea es la seguridad de tus datos."
     },
     "stat3": {
       "title": "Experiencia de Usuario",
-      "subtitle": "Obsesión",
+      "subtitle": "NuestraObsesión",
       "description": "Nos obsesionamos con la experiencia de usuario y la satisfaccion del consumidor, tanto para el usuario final como para el cliente."
     }
   },
@@ -75,5 +75,70 @@
     "connectTitle": "Contactanos",
     "rights": "© 2026 Marea. Todos los derechos reservados.",
     "stack": "Construido con Next.js 15 • TypeScript • Tailwind CSS"
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "Capacidades de Ingeniería",
+      "title": "Lo Que Hacemos",
+      "subtitle": "// SISTEMA LISTO"
+    },
+    "grid": {
+      "badge": "Stack de Ingeniería",
+      "title": "Lo Que",
+      "titleAccent": "Construimos."
+    },
+"items": [
+    {
+      "title": "Desarrollo Web",
+      "description": "Diseñamos interfaces digitales de alto rendimiento. No solo hacemos sitios; creamos aplicaciones React con tipado estricto, optimizadas para Core Web Vitals y tiempos de carga ínfimos, garantizando una experiencia de usuario que convierte.",
+      "solutions": [
+        "Landing pages de alta conversión para agencias y startups.",
+        "Arquitecturas optimizadas para SEO con Next.js y TypeScript.",
+        "UI/UX interactiva con animaciones fluidas en Framer Motion."
+      ],
+      "stack": ["React", "Next.js", "TypeScript", "Tailwind"]
+    },
+    {
+      "title": "Sistemas de Gestión, Backend & APIs",
+      "description": "Resolvemos el caos operativo con arquitectura backend robusta. Diseñamos sistemas centralizados y dashboards financieros que priorizan la integridad de datos y la seguridad, usando patrones orientados a objetos para asegurar escalabilidad.",
+      "solutions": [
+        "Sistemas ERP/CRM a medida para lógica de negocio interna.",
+        "Dashboards financieros con datos en tiempo real (PostgreSQL/Redis).",
+        "APIs RESTful seguras construidas con Django y Python."
+      ],
+      "stack": ["Django", "Python", "PostgreSQL", "Redis"]
+    },
+    {
+      "title": "Automation & Scripting",
+      "description": "Eliminamos la carga manual mediante una confiabilidad técnica rigurosa. Desde motores de procesamiento de datos hasta testing automatizado, desarrollamos scripts que garantizan calidad de software y eficiencia operativa.",
+      "solutions": [
+        "Scripts de Python (ETL) para procesamiento masivo de datos.",
+        "Suites de testing automatizado (Unit/E2E) con 90%+ de cobertura.",
+        "Automatización de pipelines CI/CD para despliegues predecibles."
+      ],
+      "stack": ["Python", "Docker", "GitHub Actions", "Unit Testing"]
+    }
+  ],
+    "methodology": {
+      "badge": "Cómo Trabajamos",
+      "title": "El Método Marea",
+      "steps": [
+        {
+          "phase": "01",
+          "label": "Descubrimiento",
+          "description": "Auditoría técnica profunda de tu dominio. Mapeamos restricciones, definimos la arquitectura y alineamos los no-negociables antes de escribir una sola línea."
+        },
+        {
+          "phase": "02",
+          "label": "Construcción",
+          "description": "Desarrollo iterativo y type-safe con integración continua. Cada feature es revisado, testeado y publicado con confianza."
+        },
+        {
+          "phase": "03",
+          "label": "Despliegue",
+          "description": "Deployment cloud-native con estrategia de cero downtime. Monitoreo en producción, planes de rollback y documentación de entrega incluidos."
+        }
+      ]
+    }
   }
 }

@@ -3,8 +3,7 @@
 export interface NavDict {
   brand: string;
   home: string;
-  projects: string;
-  reviews: string;
+  services: string;
   contact: string;
   toggleMenu: string;
 }
@@ -45,13 +44,12 @@ export interface StatEntry {
 export interface StatsDict {
   stat1: Required<StatEntry>;
   stat2: Required<StatEntry>;
-  stat3: Omit<StatEntry, "title">; // stat3 title is rendered via CountUpMetric
+  stat3: Required<StatEntry>;
 }
 
 export interface FooterNavItems {
   home: string;
-  projects: string;
-  reviews: string;
+  services: string;
 }
 
 export interface FooterDict {
@@ -68,10 +66,42 @@ export interface FooterDict {
 
 // ─── Full dictionary (top-level shape matching en.json / es.json) ─────────────
 
+export interface ServicesPageHeroDict {
+  badge: string;
+  title: string;
+  subtitle: string;
+}
+
+export interface ServicesPageGridDict {
+  badge: string;
+  title: string;
+  titleAccent: string;
+}
+
+export interface MethodologyStep {
+  phase: string;
+  label: string;
+  description: string;
+}
+
+export interface MethodologyDict {
+  badge: string;
+  title: string;
+  steps: MethodologyStep[];
+}
+
+export interface ServicesPageDict {
+  hero: ServicesPageHeroDict;
+  grid: ServicesPageGridDict;
+  items: ServiceItem[];
+  methodology: MethodologyDict;
+}
+
 export interface Dictionary {
   nav: NavDict;
   hero: HeroDict;
   services: ServicesDict;
   stats: StatsDict;
   footer: FooterDict;
+  servicesPage: ServicesPageDict;
 }

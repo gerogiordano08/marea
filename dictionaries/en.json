@@ -58,7 +58,8 @@
       "description": "Number one priority is security."
     },
     "stat3": {
-      "subtitle": "User Experience",
+      "title": "User Experience",
+      "subtitle": "An Obsession",
       "description": "We obsess over user experience and customer satisfaction, both for the end user and the client."
     }
   },
@@ -75,5 +76,70 @@
     "connectTitle": "Connect",
     "rights": "© 2026 Marea. All rights reserved.",
     "stack": "Built with Next.js 15 • TypeScript • Tailwind CSS"
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "Engineering Capabilities",
+      "title": "What We Do",
+      "subtitle": "// SYSTEM READY"
+    },
+    "grid": {
+      "badge": "Engineering Stack",
+      "title": "What We",
+      "titleAccent": "Build."
+    },
+"items": [
+    {
+      "title": "Web Development",
+      "description": "We engineer high-performance digital interfaces. We don't just build sites; we create type-safe React applications optimized for Core Web Vitals and sub-second load times, ensuring a premium user experience that converts.",
+      "solutions": [
+        "High-conversion landing pages for agencies and startups.",
+        "SEO-optimized architectures with Next.js and TypeScript.",
+        "Interactive UI/UX with fluid Framer Motion animations."
+      ],
+      "stack": ["React", "Next.js", "TypeScript", "Tailwind"]
+    },
+    {
+      "title": "Management Systems, Backend & APIs",
+      "description": "We solve operational chaos with robust backend architecture. We design centralized systems and financial dashboards that prioritize data integrity and security, using object-oriented patterns to ensure long-term scalability.",
+      "solutions": [
+        "Custom ERP/CRM systems for internal business logic.",
+        "Financial dashboards with real-time PostgreSQL/Redis data.",
+        "Secure RESTful APIs built with Django and Python."
+      ],
+      "stack": ["Django", "Python", "PostgreSQL", "Redis"]
+    },
+    {
+      "title": "Automation & Scripting",
+      "description": "We eliminate manual overhead through rigorous technical reliability. From data processing engines to automated testing, we develop scripts that guarantee software quality and operational efficiency.",
+      "solutions": [
+        "Custom Python ETL scripts for massive data processing.",
+        "Automated testing suites (Unit/E2E) with 90%+ coverage.",
+        "CI/CD pipeline automation for predictable deployments."
+      ],
+      "stack": ["Python", "Docker", "GitHub Actions", "Unit Testing"]
+    }
+  ],
+    "methodology": {
+      "badge": "How We Work",
+      "title": "The Marea Method",
+      "steps": [
+        {
+          "phase": "01",
+          "label": "Discovery",
+          "description": "Deep technical audit of your domain. We map constraints, define the architecture, and align on non-negotiables before writing a single line."
+        },
+        {
+          "phase": "02",
+          "label": "Build",
+          "description": "Iterative, type-safe development with continuous integration. Every feature is reviewed, tested, and shipped with confidence."
+        },
+        {
+          "phase": "03",
+          "label": "Deploy",
+          "description": "Cloud-native deployment with zero-downtime strategy. Production monitoring, rollback plans, and handoff documentation included."
+        }
+      ]
+    }
   }
 }
