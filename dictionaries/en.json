@@ -7,10 +7,10 @@
     "toggleMenu": "Toggle menu"
   },
   "hero": {
-    "badge": "Engineering Excellence",
+    "badge": "Engineering excellence for your business",
     "title1": "Digital Systems",
     "title2": "Built to Last",
-    "description": "Marea delivers type-safe architecture and technical rigor.\nWe're a software solutions agency from Mendoza, Argentina, engineered for reliability, security and perfection.",
+    "description": "Marea delivers safe and solid architecture.\nWe're a software solutions agency from Mendoza, Argentina, engineered for reliability, security and perfection.",
     "ctaPrimary": "Our Services",
     "ctaSecondary": "Client Reviews",
     "card1Badge": "TYPE-SAFE",
@@ -50,16 +50,16 @@
     "stat1": {
       "title": "Cloud-Native",
       "subtitle": "Solutions",
-      "description": "Production-ready systems deployed across fintech, e-commerce, and SaaS platforms."
+      "description": "Production-ready systems cloud-deployed for the best experience."
     },
     "stat2": {
       "title": "Security First",
       "subtitle": "Philosophy",
-      "description": "Mountain-sharp precision meets fluid technical execution. Local talent, global standards."
+      "description": "Number one priority is security."
     },
     "stat3": {
-      "subtitle": "Type-Safe Architecture",
-      "description": "Every project built with TypeScript, strict mode enabled. No compromises on code quality."
+      "subtitle": "User Experience",
+      "description": "We obsess over user experience and customer satisfaction, both for the end user and the client."
     }
   },
   "footer": {
