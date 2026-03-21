@@ -140,5 +140,150 @@
         }
       ]
     }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Iniciar un Proyecto",
+      "title": "Construyamos Algo.",
+      "subtitle": "// INICIALIZAR SESIÓN DE DISCOVERY"
+    },
+    "serviceSelector": {
+      "label": "¿Qué estás construyendo?",
+      "services": [
+        {
+          "value": "web_dev",
+          "label": "[ WEB DEV ]",
+          "description": "Portfolios, SaaS, Landing Pages"
+        },
+        {
+          "value": "systems",
+          "label": "[ SYSTEMS ]",
+          "description": "ERP/CRM, Dashboards Financieros"
+        },
+        {
+          "value": "scripting",
+          "label": "[ SCRIPTS ]",
+          "description": "Automatización, Pipelines / ETL"
+        }
+      ]
+    },
+    "webDev": {
+      "projectType": {
+        "label": "Tipo de Proyecto",
+        "options": [
+          { "value": "portfolio", "label": "Sitio Portfolio / Agencia" },
+          { "value": "saas",      "label": "Aplicación SaaS" },
+          { "value": "b2b",       "label": "Landing Page B2B" },
+          { "value": "other",     "label": "Otro" }
+        ]
+      },
+      "techStack": {
+        "label": "Preferencia de Stack Técnico",
+        "chips": ["REACT", "NEXT.JS", "TYPESCRIPT", "TAILWIND"]
+      },
+      "motionLevel": {
+        "label": "Nivel de Motion Design",
+        "options": [
+          { "value": "minimal",  "label": "Mínimo — limpio y rápido" },
+          { "value": "balanced", "label": "Equilibrado — interacciones sutiles" },
+          { "value": "kinetic",  "label": "Kinetic / Premium — animaciones completas" }
+        ]
+      },
+      "integrations": {
+        "label": "Integraciones Principales",
+        "chips": ["CMS", "Stripe", "APIs de Terceros", "Auth", "Analytics"]
+      }
+    },
+    "systems": {
+      "coreObjective": {
+        "label": "Objetivo Principal",
+        "options": [
+          { "value": "ops",     "label": "Resolver caos operativo" },
+          { "value": "finance", "label": "Seguimiento financiero y reportes" },
+          { "value": "viz",     "label": "Dashboard de visualización de datos" },
+          { "value": "other",   "label": "Otro" }
+        ]
+      },
+      "systemType": {
+        "label": "Tipo de Sistema",
+        "options": [
+          { "value": "erp",    "label": "ERP — Planificación de Recursos Empresariales" },
+          { "value": "crm",    "label": "CRM — Gestión de Relaciones con Clientes" },
+          { "value": "custom", "label": "Herramienta Interna Personalizada" },
+          { "value": "other",  "label": "Otro" }
+        ]
+      },
+      "dataArch": {
+        "label": "Arquitectura de Datos",
+        "chips": ["PostgreSQL", "SQL Server", "Redis", "MongoDB"]
+      },
+      "userScope": {
+        "label": "Usuarios y Seguridad",
+        "options": [
+          { "value": "internal", "label": "Solo equipo interno" },
+          { "value": "clients",  "label": "Usuarios externos / clientes" },
+          { "value": "mixed",    "label": "Mixto (internos + clientes)" }
+        ]
+      }
+    },
+    "scripting": {
+      "workflowChallenge": {
+        "label": "Desafío de Flujo de Trabajo",
+        "options": [
+          { "value": "manual",   "label": "Eliminar tareas manuales" },
+          { "value": "pipeline", "label": "Construir un pipeline de procesamiento" },
+          { "value": "etl",      "label": "ETL — Extraer, Transformar, Cargar" },
+          { "value": "other",    "label": "Otro" }
+        ]
+      },
+      "dataSources": {
+        "label": "Fuentes de Datos / Entradas",
+        "chips": ["APIs REST", "CSV / Excel", "Base de Datos", "Webhooks", "FTP / SFTP", "Otro"]
+      },
+      "targetOutput": {
+        "label": "Sistemas Destino / Salidas",
+        "placeholder": "ej. PostgreSQL, Google Sheets, S3, reporte por email..."
+      },
+      "frequency": {
+        "label": "Frecuencia de Automatización",
+        "options": [
+          { "value": "realtime",  "label": "Tiempo real / Disparado por evento" },
+          { "value": "hourly",    "label": "Por hora" },
+          { "value": "daily",     "label": "Batch diario" },
+          { "value": "on_demand", "label": "A demanda" }
+        ]
+      }
+    },
+    "common": {
+      "name":  { "label": "Nombre Completo",    "placeholder": "Juan García" },
+      "email": { "label": "Email Profesional",  "placeholder": "juan@empresa.com" },
+      "brief": {
+        "label": "Resumen Técnico",
+        "placeholder": "Describí el desafío u objetivo de negocio. ¿Cómo se ve el éxito para tu equipo?"
+      },
+      "budget": {
+        "label": "Rango de Presupuesto",
+        "options": [
+          { "value": "lt_2k",  "label": "< $2.000" },
+          { "value": "2k_5k",  "label": "$2.000 – $5.000" },
+          { "value": "5k_10k", "label": "$5.000 – $10.000" },
+          { "value": "gt_10k", "label": "$10.000 +" }
+        ]
+      }
+    },
+    "form": {
+      "button": "INITIALIZE CONTACT",
+      "errors": {
+        "required":        "Este campo es obligatorio.",
+        "invalidEmail":    "Dirección de email inválida.",
+        "serviceRequired": "Por favor seleccioná un servicio para continuar."
+      }
+    },
+    "success": {
+      "status": "[STATUS: SUCCESS]",
+      "title": "Transmisión Inicializada.",
+      "message": "Tu solicitud de discovery fue recibida y está en cola de revisión. Un ingeniero de Marea se comunicará dentro de 24 horas para coordinar una reunión técnica.",
+      "sub": "Revisá tu inbox para la confirmación."
+    }
   }
 }

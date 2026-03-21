@@ -34,12 +34,12 @@ export default function Navigation({ lang, dict }: { lang: string; dict: NavDict
             >
               {dict.services}
             </Link>
-            <a
-              href="mailto:gerogiordano08@gmail.com"
+            <Link
+              href={`/${lang}/contact`}
               className="font-medium px-6 py-2 bg-accent text-white hover:bg-accent-deep transition-colors"
             >
               {dict.contact}
-            </a>
+            </Link>
           </div>
           
           {/* Mobile Menu Button */}
@@ -67,12 +67,12 @@ export default function Navigation({ lang, dict }: { lang: string; dict: NavDict
             >
               {dict.services}
             </Link>
-            <a
-              href="mailto:gerogiordano08@gmail.com"
-              className="block py-2 font-medium text-accent"
+            <Link
+              href={`/${lang}/contact`}
+              className="block py-2 font-medium text-accent hover:text-accent-deep transition-colors"
             >
               {dict.contact}
-            </a>
+            </Link>
           </div>
         )}
       </div>

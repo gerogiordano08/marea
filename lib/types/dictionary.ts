@@ -24,6 +24,7 @@ export interface HeroDict {
 export interface ServiceItem {
   title: string;
   description: string;
+  solutions?: string[];
   stack: string[];
 }
 
@@ -97,11 +98,99 @@ export interface ServicesPageDict {
   methodology: MethodologyDict;
 }
 
-export interface Dictionary {
-  nav: NavDict;
-  hero: HeroDict;
-  services: ServicesDict;
-  stats: StatsDict;
-  footer: FooterDict;
-  servicesPage: ServicesPageDict;
+// ─── Contact page ─────────────────────────────────────────────────────────────
+
+export interface ContactHeroDict {
+  badge: string;
+  title: string;
+  subtitle: string;
 }
+
+export interface ContactServiceCard {
+  value: string;
+  label: string;
+  description: string;
+}
+
+export interface ContactServiceSelectorDict {
+  label: string;
+  services: ContactServiceCard[];
+}
+
+// Shared building blocks
+export interface SelectOption  { value: string; label: string; }
+export interface ChipField     { label: string; chips: string[]; }
+export interface SelectField   { label: string; options: SelectOption[]; }
+export interface TextInputField { label: string; placeholder: string; }
+export interface BudgetField   { label: string; options: SelectOption[]; }
+
+// Service-specific schemas
+export interface ContactWebDevDict {
+  projectType:  SelectField;
+  techStack:    ChipField;
+  motionLevel:  SelectField;
+  integrations: ChipField;
+}
+
+export interface ContactSystemsDict {
+  coreObjective: SelectField;
+  systemType:    SelectField;
+  dataArch:      ChipField;
+  userScope:     SelectField;
+}
+
+export interface ContactScriptingDict {
+  workflowChallenge: SelectField;
+  dataSources:       ChipField;
+  targetOutput:      TextInputField;
+  frequency:         SelectField;
+}
+
+// Common fields
+export interface ContactCommonDict {
+  name:   TextInputField;
+  email:  TextInputField;
+  brief:  TextInputField;
+  budget: BudgetField;
+}
+
+export interface ContactFormDict {
+  button: string;
+  otherPlaceholder: string;
+  errors: {
+    required: string;
+    invalidEmail: string;
+    serviceRequired: string;
+  };
+}
+
+export interface ContactSuccessDict {
+  status:  string;
+  title:   string;
+  message: string;
+  sub:     string;
+}
+
+export interface ContactDict {
+  hero:            ContactHeroDict;
+  serviceSelector: ContactServiceSelectorDict;
+  webDev:          ContactWebDevDict;
+  systems:         ContactSystemsDict;
+  scripting:       ContactScriptingDict;
+  common:          ContactCommonDict;
+  form:            ContactFormDict;
+  success:         ContactSuccessDict;
+}
+
+export interface Dictionary {
+  nav:          NavDict;
+  hero:         HeroDict;
+  services:     ServicesDict;
+  stats:        StatsDict;
+  footer:       FooterDict;
+  servicesPage: ServicesPageDict;
+  contact:      ContactDict;
+}
+
+
+
