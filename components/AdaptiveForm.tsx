@@ -2,6 +2,7 @@
 
 import { useState, useId } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { sendEmail } from "@/app/actions/send-email";
 import type { ContactDict, ContactServiceCard } from "@/lib/types/dictionary";
 
 const TIDAL_EASE = [0.22, 1, 0.36, 1] as const;
@@ -583,19 +584,66 @@ export default function AdaptiveForm({ dict }: { dict: ContactDict }) {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!selectedService) {
-      setErrors({ service: dict.form.errors.serviceRequired });
-      // Scroll to top to show error
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
-    }
-    if (validate()) {
-      setSubmitted(true);
-    }
-  };
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (validate()) {
+    const budgetLabel = dict.common.budget.options.find(o => o.value === commonState.budget)?.label || commonState.budget;
+    const serviceLabel = dict.serviceSelector.services.find(s => s.value === selectedService)?.label || selectedService;
 
+    const wd = webDevState as any;
+    const sys = systemsState as any;
+    const scr = scriptingState as any;
+
+    let mappedServiceData: any = {};
+    if (selectedService === "web_dev") {
+      const pt = dict.webDev.projectType.options.find(o => o.value === wd.projectType)?.label;
+      const ml = dict.webDev.motionLevel.options.find(o => o.value === wd.motionLevel)?.label;
+      mappedServiceData = {
+        projectType: wd.projectType === "other" ? wd.otherProjectType : (pt || wd.projectType),
+        motionLevel: ml || wd.motionLevel,
+      };
+    } else if (selectedService === "systems") {
+      const co = dict.systems.coreObjective.options.find(o => o.value === sys.coreObjective)?.label;
+      const st = dict.systems.systemType.options.find(o => o.value === sys.systemType)?.label;
+      const us = dict.systems.userScope.options.find(o => o.value === sys.userScope)?.label;
+      mappedServiceData = {
+        coreObjective: sys.coreObjective === "other" ? sys.otherCoreObjective : (co || sys.coreObjective),
+        systemType: sys.systemType === "other" ? sys.otherSystemType : (st || sys.systemType),
+        userScope: us || sys.userScope,
+      };
+    } else if (selectedService === "scripting") {
+      const wc = dict.scripting.workflowChallenge.options.find(o => o.value === scr.workflowChallenge)?.label;
+      const fq = dict.scripting.frequency.options.find(o => o.value === scr.frequency)?.label;
+      
+      let ds = scr.dataSources ? [...scr.dataSources] : [];
+      if (ds.some((d: string) => d.toLowerCase() === "other" || d.toLowerCase() === "otro") && scr.otherDataSources) {
+        ds = ds.filter((d: string) => d.toLowerCase() !== "other" && d.toLowerCase() !== "otro");
+        ds.push(`Otra: ${scr.otherDataSources}`);
+      }
+
+      mappedServiceData = {
+        workflowChallenge: scr.workflowChallenge === "other" ? scr.otherWorkflowChallenge : (wc || scr.workflowChallenge),
+        frequency: fq || scr.frequency,
+        dataSources: ds.join(", ") || "",
+        targetOutput: scr.targetOutput,
+      };
+    }
+
+    const payload = {
+      common: {
+        ...commonState,
+        budget: budgetLabel
+      },
+      serviceType: selectedService,
+      serviceLabel: serviceLabel,
+      serviceData: mappedServiceData,
+      lang: "es" // o dinámico
+    };
+
+    const result = await sendEmail(payload);
+    if (result.success) setSubmitted(true);
+  }
+};
   if (submitted) {
     return (
       <div className="py-12">
